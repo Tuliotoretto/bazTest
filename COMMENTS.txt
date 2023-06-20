@@ -1,0 +1,35 @@
+o Explicar la arquitectura que utilizaste en tu proyecto y la razón por la que
+decidiste utilizarla
+
+Utilicé la arquitectura MVC. Ya que la mayoria de la funcionalidad se encuentra
+dentro de "singletons". La aplicación es sencilla, por lo cual otra arquitectura
+haría más ruido.
+
+o Lista de las librerías externas que utilizaste, explicándo qué hacen y la razón
+por la que la elegiste
+
+No usé ninguna libreria
+
+o Qué parte(s) de tu código pueden ser mejoradas si tuvieras más tiempo
+
+  - Podría hacer un "TableViewController" que tuviera la funcionalidad necesaria,
+    y que "ListViewController" y "FavoritesViewController" heredaran de esta.
+  - En "ListViewController" agregar filtros para buscar shows con diferentes parámetros
+    y pasar a la siguiente pagina cuando se llegue al final
+  - guardar las imagenes descargadas en cache para no carcarlas del API cada que
+    se muestran
+
+
+o Cuáles fueron los mayores problemas que encontraste en el desarrollo de
+la práctica y cómo los resolviste?
+
+ - Estaba pensando en usar la estructura "Show"(que es la que responde el API)
+  para guardar los datos en CoreData, pero este es limitado a los tipos de datos
+  que puede almacenar. Intenté usar UserDefaults pero este tarda unos segundos en guardar,
+  por lo que la experiencia de usuario no es la mejor. Decidí crear mi propio modelo ("FavoritesShows")para
+  guardar los datos.
+
+o Si alguno de los puntos solicitados no los concluiste, menciona por qué. Si
+fuera por cuestión de tiempo, trata de mencionar qué estrategia llevarías a cabo para desarrollarlo
+
+- Pruebas Unitarias: hacer pruebas del API y de la db
